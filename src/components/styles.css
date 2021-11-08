@@ -1,0 +1,79 @@
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: fit-content;
+    border: solid grey 1px;
+}
+
+.login-form {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border: solid grey 1px;
+}
+
+.navbar-link {
+    border-radius: 5px;
+}
+
+.navbar-link:hover {
+    background-color: darkgrey;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding-right: 10px;
+}
+
+/* input-registration-form{
+    height: calc(10px + 2vmin);
+    border: none;
+    border-radius: 0px;
+}
+input:focus{
+    background-color:#F7F7F7;
+} */
+
+.tile {
+    border: solid black 1px;
+    padding: 10px;
+    width: 100%;
+    color: black;
+    width: fit-content;
+}
+
+.navbar-container {
+    font-size: 30px;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    background-color: grey;
+}
+
+.navbar-button {
+    background-color: black;
+    border: none;
+    border-radius: 0;
+    width: 160px;
+    font-size: 30px;
+    color: white;
+}
+
+.new-issue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-issue-form {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}

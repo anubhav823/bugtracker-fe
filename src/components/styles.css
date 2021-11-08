@@ -1,8 +1,8 @@
 .registration-form {
+    width: fit-content;
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    width: fit-content;
+    padding: 5px;
     border: solid grey 1px;
 }
 
@@ -70,10 +70,15 @@ input:focus{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
+    border: solid 1px brown;
 }
 
 .new-issue-form {
+    background-color: aqua;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     width: fit-content;
 }

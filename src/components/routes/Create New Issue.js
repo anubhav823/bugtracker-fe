@@ -1,3 +1,4 @@
+import './../styles.css'
 export function CreateNewIssue() {
     return (
         <div className='new-issue'>

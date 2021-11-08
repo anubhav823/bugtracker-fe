@@ -8,6 +8,8 @@ import { Home } from './components/routes/home';
 import { CreateNewIssue } from './components/routes/Create New Issue'
 import { MyIssues } from './components/routes/MyIssues'
 import { Issues } from './components/routes/issues'
+import { LoginModal } from './components/routes/Login-modal';
+import { Register } from './components/routes/Register-modal';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
@@ -17,14 +19,12 @@ ReactDOM.render(
           <Route path="issues" element={<Issues />} />
           <Route path="newissue" element={<CreateNewIssue />} />
           <Route path="myissues" element={<MyIssues />} />
+          <Route path="register" element={<Register />} />
+          <Route path="login" element={<LoginModal />} />
         </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

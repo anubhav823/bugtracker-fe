@@ -1,10 +1,11 @@
 import { Tile } from "../Tile";
+import GetAllUsers from "../../service/GetAllUsers"
 
 export function MyIssues() {
-return (
+    return (
         <div className='my-issue'>
-            My Issues
-            <Tile/>
+            <GetAllUsers />
+            <Tile />
         </div>
     )
 }

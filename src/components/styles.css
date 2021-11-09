@@ -1,19 +1,21 @@
-.registration-form {
-    width: fit-content;
+.login-form-container {
     display: flex;
-    flex-direction: column;
-    padding: 5px;
-    border: solid grey 1px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: solid 1px brown;
 }
-
-.login-form {
-    width: fit-content;
+.navbar-button:hover{
+background-color: #545454;
+}
+.login-form{
+    background-color: aqua;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    padding: 5px;
-    border: solid grey 1px;
+    width: fit-content;
 }
-
 .navbar-link {
     border-radius: 5px;
 }
@@ -54,7 +56,7 @@ input:focus{
     width: 100vw;
     position: sticky;
     top: 0;
-    background-color: grey;
+    background-color: #0239ba;
 }
 
 .navbar-button {

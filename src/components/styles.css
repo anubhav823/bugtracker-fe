@@ -29,7 +29,18 @@ a {
     color: white;
     padding-right: 10px;
 }
-
+.summary{
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    height: fit-content;
+    background-color: blanchedalmond;
+}
+.description{
+    display: flex;
+    align-items: center;
+    height: fit-content;
+}
 /* input-registration-form{
     height: calc(10px + 2vmin);
     border: none;
@@ -42,9 +53,8 @@ input:focus{
 .tile {
     border: solid black 1px;
     padding: 10px;
-    width: 100%;
+    width: 200px;
     color: black;
-    width: fit-content;
 }
 
 .navbar-container {
@@ -73,14 +83,13 @@ input:focus{
     justify-content: center;
     align-items: center;
     padding: 10px;
-    border: solid 1px brown;
 }
 
 .new-issue-form {
-    background-color: aqua;
+    background-color:whitesmoke;
     display: flex;
+    padding: 10px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: fit-content;
 }

@@ -1,11 +1,11 @@
-import { Tile } from "../Tile";
-import GetAllUsers from "../../service/GetAllUsers"
+import GetAllIssues from "../../service/GetAllIssues"
 
 export function MyIssues() {
     return (
         <div className='my-issue'>
-            <GetAllUsers />
-            <Tile />
+            {/* <GetAllUsers /> */}
+            {/* <Tile /> */}
+            <GetAllIssues/>
         </div>
     )
 }

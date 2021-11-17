@@ -1,7 +1,6 @@
 import React from "react";
 class GetAllUsers extends React.Component {
 
-  // Constructor
   constructor(props) {
     super(props);
 
@@ -11,34 +10,32 @@ class GetAllUsers extends React.Component {
     };
   }
 
-  // ComponentDidMount is used to
-  // execute the code
   componentDidMount() {
     fetch("http://localhost:8081/users").then((res) => res.json())
-    .then((json) => {
+      .then((json) => {
         this.setState({
-            items: json,
-            DataisLoaded: true
+          items: json,
+          DataisLoaded: true
         });
-    })
+      })
   }
+
   render() {
     const { DataisLoaded, items } = this.state;
     if (!DataisLoaded) return <div>
-      <h1> Pleses wait some time.... </h1> </div>;
-
+      <h1> Please wait some time....</h1> </div>;
     return (
-      <div className="App">
-        <h1> Fetch data from an api in react </h1> {
-          items.map((item) => (
-            <ol key={item.id} >
-              <li>First Name: {item.firstName}</li>
-              <li>Last Name: {item.lastName}</li>
-              <li>Email: {item.email}</li>
-              <li> Password: {item.password}</li>
-            </ol>
-          ))
-        }
+      <div className="App"> {
+        items.map((item) => (
+          <ol key={item.id} >
+            <li>Id: {item.id}</li>
+            <li>First Name: {item.firstName}</li>
+            <li>Last Name: {item.lastName}</li>
+            <li>Email: {item.email}</li>
+            <li>Password: {item.password}</li>
+          </ol>
+        ))
+      }
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import GetAllUsers from "../../service/GetAllUsers";
 
 export class Register extends Component {
     constructor(props) {
@@ -17,6 +18,7 @@ export class Register extends Component {
             method: 'post',
             headers: { 'Content-type': 'application/json' },
             body: JSON.stringify({
+                'id':this.id.value,
                 'firstName': this.firstName.value,
                 'lastName': this.lastName.value,
                 'email': this.email.value,
@@ -28,6 +30,8 @@ export class Register extends Component {
         return (
             <div className='login-form-container' >
                 <form className='login-form'>
+                    <label>Id:</label>
+                    <input ref={(ref) => { this.id = ref }} type='text' id='id' placeholder='id'></input>
                     <label>First Name</label>
                     <input ref={(ref) => { this.firstName = ref }} type='text' id='firstName' placeholder='First name'></input>
                     <label>Last Name</label>
@@ -37,48 +41,12 @@ export class Register extends Component {
                     <label>Password</label>
                     <input ref={(ref) => { this.password = ref }} type='password' id='password' placeholder='Enter a password'></input>
                     <label>Confirm Password</label>
-                    <input ref={(ref) => { this.firstName = ref }} type='password' id='confirm_password' onChange={this.confirmPasswordsMatch} placeholder='Confirm password'></input>
+                    <input ref={(ref) => { this.confirmPassword = ref }} type='password' id='confirm_password' onChange={this.confirmPasswordsMatch} placeholder='Confirm password'></input>
                     <button type='submit' onClick={this.handleSubmit}>Register</button>
                 </form>
+                <GetAllUsers/>
             </div>
         )
     }
 }
-//     state = { show: false };
-//     showRegisterModal = () => {
-//         this.setState({ show: true });
-//     };
-//     hideRegisterModal = () => {
-//         this.setState({ show: false });
-//     };
-//     render() {
-//         return (
-//             <Modal show={this.state.show} handleClose={this.hideRegisterModal}>
-//                     <div className='registration-form-container'>
-//                         <form className='registration-form'>
-//                             <label>First Name</label><input className='registration-input' type='text' id='firstName' placeholder='Enter your first name'></input>
-//                             <label>Last Name</label><input className='registration-input' type='text' id='lastName' placeholder='Enter your last name'></input>
-//                             <label>Email</label><input type='text' id='email' placeholder='Enter your email'></input>
-//                             <label>Password</label><input className='registration-input' type='password' id='password' placeholder='Enter a password'></input>
-//                             <label>Enter your password once more</label><input className='registration-input' type='password' id='password-confirmation' placeholder='Confirm password'></input>
-//                             <button type='submit'>Register</button>
-//                         </form>
-//                     </div>
-//             </Modal>
-
-//         )
-//     }
-// }
-// const Modal = ({ handleClose, show, children }) => {
-//     const showHideClassName = show ? 'modal display-block' : 'modal display-none';
-//     return (
-//         <div className={showHideClassName}>
-//             <section className='modal-main'>
-//                 {children}
-//                 <button onClick={handleClose}>Close</button>
-//             </section>
-//         </div>
-//     )
-// }
-// const container = document.createElement('div')
-// document.body.appendChild(container)
+export default Register;

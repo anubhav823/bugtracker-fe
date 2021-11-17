@@ -21,6 +21,14 @@ ReactDOM.render(
           <Route path="myissues" element={<MyIssues />} />
           <Route path="register" element={<Register />} />
           <Route path="login" element={<LoginModal />} />
+          <Route
+            path="*"
+            element={
+              <main style={{ padding: "1rem" }}>
+                <p>There's nothing here!</p>
+              </main>
+            }
+          />
         </Route>
       </Routes>
     </BrowserRouter>

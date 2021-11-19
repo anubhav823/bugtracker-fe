@@ -7,8 +7,11 @@ export function NavBar() {
     return (
         <div className='navbar'>
             <div className='navbar-container'>
-            <div className='navbar-link'>
+                <div className='navbar-link'>
                     <Link to='/'>Home</Link>
+                </div>
+                <div className='navbar-link'>
+                    <Link to='/delete'>Delete</Link>
                 </div>
                 <div className='navbar-link'>
                     <Link to='/issues'>Issues</Link>
@@ -26,7 +29,7 @@ export function NavBar() {
                 <div className='navbar-button'>
                     <Link to='/login'><button type='button' onClick={LoginModal} className='navbar-button'>Login</button></Link>
                 </div>
-                
+
             </div>
             <Outlet />
         </div>

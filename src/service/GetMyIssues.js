@@ -1,6 +1,6 @@
 import React from "react";
 import { Tile } from "../components/drag-n-drop/Tile";
-class GetAllIssues extends React.Component {
+class GetMyIssues extends React.Component {
     constructor(props) {
         super(props);
 
@@ -10,7 +10,7 @@ class GetAllIssues extends React.Component {
         };
     }
     componentDidMount() {
-        fetch("http://localhost:8081/stories").then((res) => res.json())
+        fetch("http://localhost:8081/story/user/"+userId).then((res) => res.json())
             .then((json) => {
                 this.setState({
                     items: json,
@@ -26,7 +26,7 @@ class GetAllIssues extends React.Component {
         return (
             <div className="tiles"> {
                     items.map((item) => (
-                        <ol key={item.storyid} >
+                        <ol key={item.id} >
                             <Tile item={item}/>
                         </ol>
                     ))

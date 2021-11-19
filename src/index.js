@@ -10,12 +10,14 @@ import { MyIssues } from './components/routes/MyIssues'
 import { Issues } from './components/routes/issues'
 import { LoginModal } from './components/routes/Login-modal';
 import { Register } from './components/routes/Register-modal';
+import { DeleteIssues } from './components/DeleteIssues';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} >
           <Route path="home" element={<Home />} />
+          <Route path="delete" element={<DeleteIssues />} />
           <Route path="issues" element={<Issues />} />
           <Route path="newissue" element={<CreateNewIssue />} />
           <Route path="myissues" element={<MyIssues />} />

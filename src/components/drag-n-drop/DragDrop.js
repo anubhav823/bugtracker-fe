@@ -23,6 +23,7 @@ class DragDrop extends Component {
     }
     handleSubmit(event, task) {
         event.preventDefault();
+        console.log('handleSubmit')
         fetch('http://localhost:8081/story', {
             method: 'post',
             headers: { 'Content-type': 'application/json' },
@@ -39,7 +40,7 @@ class DragDrop extends Component {
     }
     onDrop = (ev, cat) => {
         let id = ev.dataTransfer.getData("id");
-        console.log("id ondrop " + id)
+        console.log("ondrop")
         let tasks = this.state.tasks.filter((task) => {
             if (task.storyid === id) {
                 task.status = cat;
@@ -65,7 +66,7 @@ class DragDrop extends Component {
             issues[t.status].push(
                 { t }
             );
-            console.log(issues)
+            
         });
         return (
             <div className="container-drag">
@@ -75,8 +76,8 @@ class DragDrop extends Component {
                     onDrop={(e) => this.onDrop(e, "TO_DO")}>
                     <span className="task-header">To Do</span>
                     {issues['TO_DO'].map((item) => (
-                        <ol key={item.storyid} >
-                            <Tile item={item} />
+                        <ol key={item.t.storyid} >
+                            <Tile item={item.t} />
                         </ol>
                     ))}
                 </div>
@@ -85,8 +86,8 @@ class DragDrop extends Component {
                     onDrop={(e) => this.onDrop(e, "IN_PROGRESS")}>
                     <span className="task-header">In Progress</span>
                     {issues['IN_PROGRESS'].map((item) => (
-                        <ol key={item.storyid} >
-                            <Tile item={item} />
+                        <ol key={item.t.storyid} >
+                            <Tile item={item.t} />
                         </ol>
                     ))}
                 </div>
@@ -96,8 +97,8 @@ class DragDrop extends Component {
                     <span className="task-header">Finished</span>
 
                     {issues['FINISHED'].map((item) => (
-                        <ol key={item.storyid} >
-                            <Tile item={item} />
+                        <ol key={item.t.storyid} >
+                            <Tile item={item.t} />
                         </ol>
                     ))}
                 </div>

@@ -7,10 +7,10 @@ export const Tile = ({ item }) => <div className='tile' draggable>
     <strong>Heading:</strong> {item.heading}
     </div>
     <hr />
-    <div className='description'>
+    {/* <div className='description'>
         <strong>Description:</strong> 
-            {item.description}
-    </div>
+            {item.t.description}
+    </div> */}
     <div className='assignee'>
     <strong>Assignee:</strong> {item.assignee}
     </div>
@@ -18,7 +18,6 @@ export const Tile = ({ item }) => <div className='tile' draggable>
     <strong>Reporter:</strong> {item.reporter}
     </div>
     <div className='points'>
-        {console.log(item)}
         <strong>Story Points:</strong> {item.storyPoints}
     </div>
     <div className='status'>

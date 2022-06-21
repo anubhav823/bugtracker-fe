@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 import './../styles.css'
 export class CreateNewIssue extends Component {
     constructor(props) {

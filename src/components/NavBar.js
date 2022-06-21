@@ -2,6 +2,7 @@ import { LoginModal } from './routes/Login-modal'
 import './styles.css'
 import { Outlet, Link } from "react-router-dom";
 import { Register } from './routes/Register-modal';
+import React from 'react';
 
 export function NavBar() {
     return (

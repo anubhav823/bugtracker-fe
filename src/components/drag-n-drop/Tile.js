@@ -1,4 +1,5 @@
 import './../styles.css'
+import React from 'react'
 export const Tile = ({ item }) => <div className='tile' draggable>
     <div className='id'>
     <strong>Id:</strong> {item.storyid}

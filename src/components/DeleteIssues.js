@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 export class DeleteIssues extends Component {
     constructor(props) {
         super(props);

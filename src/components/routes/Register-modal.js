@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import GetAllUsers from "../../service/GetAllUsers";
 
 export class Register extends Component {
     constructor(props) {
@@ -44,7 +43,7 @@ export class Register extends Component {
                     <input ref={(ref) => { this.confirmPassword = ref }} type='password' id='confirm_password' onChange={this.confirmPasswordsMatch} placeholder='Confirm password'></input>
                     <button type='submit' onClick={this.handleSubmit}>Register</button>
                 </form>
-                <GetAllUsers/>
+                {/* <GetAllUsers/> */}
             </div>
         )
     }

@@ -17,8 +17,13 @@
     justify-content: center;
     flex-direction: column;
     width: fit-content;
+    margin:10px;
+    padding:10px;
 }
 
+input{
+    margin:5px;
+}
 .navbar-link {
     border-radius: 5px;
 }
